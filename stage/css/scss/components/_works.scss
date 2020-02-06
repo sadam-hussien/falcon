@@ -1,0 +1,107 @@
+.works {
+    background: $blue;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url(../imgs/assist/wavy-min.png);
+        background-size: cover;
+        width: 174px;
+        height: 51px;
+    }
+
+    // title
+    .global_title {
+        .main_title .main_title_inner {
+            color: $white;
+        }
+        &::after, &::before {
+            background: $white;
+        }
+    }
+    // end title
+
+    // start works_content
+    .works_content {
+
+        // start filter_works
+        .filter_works {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: $large_distance;
+            ul {
+                li {
+                    background: $white;
+                    padding: $small_distance $medium_distance;
+                    color: $gray;
+                    font-size: $medium_font;
+                    cursor: pointer;
+                    @include transition(.5s);
+                    &:not(:last-of-type) {
+                    }
+                    &.mixitup-control-active, &:hover {
+                        color: $white;
+                        transform: translateY(-8px);
+                        background: $blue;
+                        box-shadow: 0 0 10px rgba($dark, .3);
+                    }
+                }
+            }
+        }
+        // end filter_works
+
+        // start works_wrap
+        .works_wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: $medium_distance;
+            @media (max-width: 991px) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+            @media (max-width: 767px) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media (max-width: 400px) {
+                grid-template-columns: 1fr;
+            }
+            // start single_work
+            .single_work {
+                position: relative;
+                .img {
+                    img {
+
+                    }
+                }
+                .work_desc {
+                    text-align: center;
+                    color: $blue;
+                    font-weight: bold;
+                    background-color: $white;
+                    padding: $small_distance;
+                    opacity: 0;
+                    position: absolute;
+                    bottom: 90%;
+                    left: 0;
+                    right: 0;
+                    @include transition(.5s);
+
+                }
+                &:hover {
+                    .work_desc {
+                        bottom: 0;
+                        opacity: 1;
+                    }
+                }
+            }
+            // end single_work
+        }
+        // end works_wrap
+
+    }
+    // end works_content
+
+}

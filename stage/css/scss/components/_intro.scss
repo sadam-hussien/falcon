@@ -1,0 +1,114 @@
+.intro {
+    cursor: e-resize;
+    // start intro_inner
+    .intro_inner {
+
+        // start swiper-container
+        .swiper-container {
+
+            // start swiper-wrapper
+            .swiper-wrapper {
+                // start swiper-slide
+                $slide_imgs: url(../imgs/home/slider-bg-min.jpg), url(../imgs/home/slider-bg2-min.jpg), url(../imgs/home/slider-bg3-min.jpg),;
+                @for $i from 1 through length($slide_imgs) {
+                    .swiper-slide:nth-of-type(#{$i}) {
+                        background-image: nth($slide_imgs, $i);
+                    }
+                }
+                .swiper-slide {
+                    width: 100vw;
+                    min-height: 100vh;
+                    background-size: cover;
+                    // start single_intro
+                    .single_intro {
+                        // start card
+                        .card {
+                            background: transparent;
+                            border: none;
+                            color: $white;
+                            // start card-header
+                            .card-header {
+                                background: transparent;
+                                font-weight: bold;
+                                border: none;
+                                padding: 0;
+                                h2 {
+                                    font-weight: bold;
+                                    letter-spacing: 3px;
+                                    margin-bottom: $medium_distance;
+                                }
+                            }
+                            // end card-header
+
+                            // start card-body
+                            .card-body {
+                                background: transparent;
+                                padding: 0;
+                                border: none;
+                                margin-bottom: $medium_distance;
+                                .sub-title {
+                                    margin-bottom: $small_distance;
+                                    @media (max-width: 576px) {
+                                        font-size: 1.4rem;
+                                    }
+                                }
+                                .card-text {
+                                    color: $white;
+                                }
+                            }
+                            // end card-body
+
+                            // start card-footer
+                            .card-footer {
+                                background: transparent;
+                                border: none;
+                                padding: 0;
+                                .global_btn {
+                                    color: $blue;
+                                    border-color: $white;
+                                    background: $white;
+                                    &:hover {
+                                        color: $white;
+                                        background: transparent;
+                                    }
+                                    @media (max-width: 576px) {
+                                        &:not(:last-of-type) {
+                                            margin-bottom: $medium_distance;
+                                        }
+                                        & {
+                                            margin-left: 0;
+                                        }
+                                    }
+                                }
+                            }
+                            // end card-footer
+
+                        }
+                        // end card
+                    }
+                    // end single_intro
+
+                    
+                }
+                // end swiper-slide 
+            }
+            // end swiper-wrapper
+
+            .swiper-pagination-bullet {
+                width: 15px;
+                height: 15px;
+                opacity: 1;
+                cursor: pointer;
+                background: rgba($white, .8);
+                &.swiper-pagination-bullet-active {
+                    background: $blue;
+                    border: 1px solid $white;
+                }
+            }
+
+        }
+        // end swiper-container
+
+    }
+    // end intro_inner
+}

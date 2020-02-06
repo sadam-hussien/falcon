@@ -1,0 +1,40 @@
+header.d-flex.align-items-center.head_font
+    .container-fluid
+        // start header_content
+        .header_content.d-flex.justify-content-between.align-items-center
+            
+            // start logo
+            .logo
+                .img
+                    img(src="imgs/global/Falcon-blue-min.png", alt="falcon logo", class="img-fluid")
+            // end logo
+
+            // start menu
+            nav.menu    
+                ul.list-unstyled.d-flex.align-items-center
+                    li
+                        a(href="#", data-section="home").active home
+                    li
+                        a(href="#", data-section="about") about
+                    li
+                        a(href="#", data-section="services") services
+                    li
+                        a(href="#", data-section="works") works
+                    li
+                        a(href="#", data-section="price") pricing
+                    li
+                        a(href="#", data-section="blog") blog
+                    li
+                        a(href="#", data-section="testim") testimonial
+                    li
+                        a(href="#", data-section="contact") contact
+            // end menu
+
+            // start toggle_menu
+            button.toggle_menu.d-flex.d-md-none
+                span.line1.d-block
+                span.line2.d-block
+                span.line3.d-block
+            // end toggle_menu
+
+        // end header_content

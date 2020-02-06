@@ -1,0 +1,46 @@
+- var says = [{"testim_img": "imgs/testim/testim01-min.jpg", "testim_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facilis harum modi pariatur sequi fuga provident recusandae culpa quo possimus?Lorem ipsum dolor sit amet.", "testim_name": "john doe", "testim_job": "CEO apc.com"},{"testim_img": "imgs/testim/testim01-min.jpg", "testim_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facilis harum modi pariatur sequi fuga provident recusandae culpa quo possimus?Lorem ipsum dolor sit amet.", "testim_name": "osama khalaf", "testim_job": "php developer"},{"testim_img": "imgs/testim/testim01-min.jpg", "testim_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae facilis harum modi pariatur sequi fuga provident recusandae culpa quo possimus?Lorem ipsum dolor sit amet.", "testim_name": "mahmoud hussien", "testim_job": "fron-end developer"},]
+
+- var sec_title = "testimonial";
+
+section.testim.padding_sec.position-relative
+    .container
+        .testim_content
+
+            // start title
+            .row
+                .col
+                    include global_title
+            // end title
+
+            // start testim_items
+            .testim_items
+                .swiper-container
+                    .swiper-wrapper
+                        // slider
+
+                        each say in says
+                            // one
+                            .swiper-slide
+                                .single_testim
+
+                                    // start testim_header
+                                    .testim_header
+                                        .img
+                                            img(src=say.testim_img, alt="testim 0")
+                                    // end testim_header
+
+                                    // start testim_body
+                                    .testim_body
+                                        p.card-text.global_p=say.testim_text
+                                    // end testim_body
+
+                                    // stat testim_footer
+                                    .testim_footer
+                                        h4.testim_name=say.testim_name
+                                        h6.testim_job=say.testim_job
+                                    // end testim_footer
+
+                            // end one 
+
+                    .swiper-pagination
+            // end testim_items

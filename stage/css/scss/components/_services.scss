@@ -1,0 +1,71 @@
+.services {
+
+    // start services_content
+    .services_content {
+
+        // start services_items
+        .services_items {
+
+            // start single_service'
+            .single_service {
+                padding-top: $medium_distance;
+                margin: $medium_distance 0;
+                .card {
+                    @include cardreset();
+                    padding: $medium_distance;
+                    background: $white;
+                    text-align: center;
+                    box-shadow: 0 0 10px rgba($dark, .3);
+                    position: relative;
+                    @include transition(.5s);
+                    .card-header {
+                        $d: 80px;
+                        height: 40px;
+                        @include cardreset();
+                        i {
+                            position: absolute;
+                            width: $d;
+                            height: $d;
+                            line-height: $d;
+                            text-align: center;
+                            border-radius: 50%;
+                            font-size: $big_font;
+                            font-weight: bold;
+                            background: $white;
+                            color: $dark;
+                            box-shadow: 0 0 10px rgba($dark, .3);
+                            top: 0;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            @include transition(.5s);
+                        }
+
+                    }
+                    .card-body {
+                        @include cardreset();
+                        .card-title {
+                            margin-bottom: $small_distance;
+                            color: $blue;
+                            font-weight: bold;
+                        }
+                    }
+                    &:hover {
+                        box-shadow: 0 5px 15px rgba($dark, .4);
+                        .card-header {
+                            i {
+                                box-shadow: 0 0 10px rgba($blue, 1);
+                                color: $blue;
+                            }
+                        }
+                    }
+                }
+            }
+            // end single_service
+
+        }
+        // end services_items
+
+    }
+    // end services_content
+
+}

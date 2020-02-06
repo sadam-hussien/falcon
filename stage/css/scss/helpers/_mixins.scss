@@ -1,0 +1,10 @@
+@mixin transition($sec) {
+    transition: all $sec;
+}
+
+@mixin cardreset {
+    background: transparent;
+    border: none;
+    padding: 0;
+    border-radius: 0;
+}

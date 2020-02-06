@@ -1,0 +1,107 @@
+- var sec_title = "pricing";
+
+section.price.padding_sec.position-relative 
+    .container
+        // start price_content
+        .price_content
+
+            // start title
+            .row
+                .col
+                    include global_title
+            // end title
+
+            // start price_items
+            .price_items
+                .row
+                    
+                    // start single_price
+                    .col-sm-6.col-lg-4
+                        .single_price
+                            .card
+
+                                // start card-header
+                                .card-header
+                                    .card-title.text-capitalize basic
+                                    .card-price
+                                        strong $49/
+                                        small mo
+                                // end card-header
+
+                                // start card-body
+                                .card-body 
+                                    ul.list-unstyled.m-0.p-0
+                                        - var features = ["4 Gb Ram", "1 Tb HDD", "Core i3 Processor", "16 Gb Ram", "Intel Motherboard", "4 GB Graphic Card", "I Ball Cabinet"]
+                                        each feature in features
+                                            li=feature
+                                // end card-body
+
+                                // start card-footer
+                                .card-footer
+                                    a(href="#") 
+                                        i.fas.fa-angle-right
+                                // end card-footer
+
+                    // end single_price
+                    
+                    // start single_price
+                    .col-sm-6.col-lg-4
+                        .single_price
+                            .card
+
+                                // start card-header
+                                .card-header
+                                    .card-title.text-capitalize premium
+                                    .card-price
+                                        strong $249/
+                                        small mo
+                                // end card-header
+
+                                // start card-body
+                                .card-body 
+                                    ul.list-unstyled.m-0.p-0
+                                        - var features = ["4 Gb Ram", "1 Tb HDD", "Core i3 Processor", "16 Gb Ram", "Intel Motherboard", "4 GB Graphic Card", "I Ball Cabinet"]
+                                        each feature in features
+                                            li=feature
+                                // end card-body
+
+                                // start card-footer
+                                .card-footer
+                                    a(href="#") 
+                                        i.fas.fa-angle-right
+                                // end card-footer
+
+                    // end single_price
+
+                    // start single_price
+                    .col-sm-6.col-lg-4
+                        .single_price
+                            .card
+
+                                // start card-header
+                                .card-header
+                                    .card-title.text-capitalize regular
+                                    .card-price
+                                        strong $149/
+                                        small mo
+                                // end card-header
+
+                                // start card-body
+                                .card-body 
+                                    ul.list-unstyled.m-0.p-0
+                                        - var features = ["4 Gb Ram", "1 Tb HDD", "Core i3 Processor", "16 Gb Ram", "Intel Motherboard", "4 GB Graphic Card", "I Ball Cabinet"]
+                                        each feature in features
+                                            li=feature
+                                // end card-body
+
+                                // start card-footer
+                                .card-footer
+                                    a(href="#") 
+                                        i.fas.fa-angle-right
+                                // end card-footer
+
+                    // end single_price
+
+            // end price_items
+
+        // end price_content

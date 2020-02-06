@@ -1,0 +1,41 @@
+- var sec_title = "about us";
+
+section.about.padding_sec.position-relative
+    .container
+
+        // start about_inner
+        .about_inner
+
+            // start about_head
+            .row
+                .col
+                    .about_head
+                        // start global_title
+                        include global_title
+                        // end global_title
+                        
+
+            // end about_head
+
+            block about_desc_outer
+                .row
+                    
+                    block about_desc_inner
+                        // start about_desc
+                        .col-md-6
+                            .about_desc
+                                .card-body
+                                    p.global_p Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                                .card-footer
+                                    include global_btn
+                        // end about_desc
+
+                    block about_desc_img
+                        // start about_desc_img
+                        .col-md-6
+                            .about_desc_img.d-none.d-md-flex.justify-content-center
+                                .img
+                                    img(src="imgs/about/Macbook-min.png", alt="about img desc", class="img-fluid")
+                        // end about_desc_img
+
+        // end about_inner

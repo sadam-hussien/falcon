@@ -1,0 +1,37 @@
+- var sec_title = "contact";
+
+section.contact.padding_sec.position-relative
+    .container
+        .contact_content
+
+            // start title
+            .row
+                .col
+                    include global_title
+            // end title
+
+            // start contact_form
+            .contact_form
+                form
+                    .form-group
+                        label(for="username") name
+                        input(type="text", class="form-control", id="username")
+                    
+                    .form-group
+                        label(for="email") email address
+                        input(type="email", class="form-control", id="email")
+                    
+                    .form-group
+                        label(for="mobile") mobile number
+                        input(type="number", class="form-control", id="mobile")
+
+                    .form-group
+                        label(for="subject") subject
+                        input(type="text", class="form-control", id="subject")
+
+                    .form-group.textmessage
+                        label(for="message") message
+                        textarea(id="message", class="form-control")
+
+                    button(type="submit") submit
+            // end contact_form

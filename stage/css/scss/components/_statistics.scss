@@ -1,0 +1,77 @@
+.statistic {
+
+    // start statistic_content
+    .statistic_content {
+
+        // start statis_item
+        .statis_item {
+            text-align: center;
+            padding: $medium_distance;
+            box-shadow: 0 0 10px rgba($dark, .3);
+            margin-bottom: $large_distance;
+            overflow: hidden;
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 0;
+                background: $blue;
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                transform: translate(30%, -30%);
+            }
+            .card {
+                @include cardreset();
+                .card-header {
+                    @include cardreset();
+                    margin-bottom: $small_distance;
+                    i {
+                        $wi: 60px;
+                        font-size: $big_font;
+                        color: $dark;
+                        width: $wi;
+                        height: $wi;
+                        line-height: $wi;
+                        text-align: center;
+                        background: $white;
+                        border-radius: 50%;
+                        box-shadow: 0 0 10px rgba($dark, .3);
+                    }
+                }
+
+                .card-body {
+                    @include cardreset();
+                    margin-bottom: $small_distance;
+                    .count {
+                        font-size: 25px;
+                        font-weight: bold;
+                        .number {
+                            margin-right: 5px;
+                            color: $blue;
+                        }
+                        .plus {
+                            color: $dark;
+                            // font-size: 25px;
+                        }
+                    }
+                }
+
+                .card-footer {
+                    @include cardreset();
+                    .statis_title {
+                        color: $dark;
+                        font-weight: bold;
+                    }
+                }
+
+            }
+
+        }
+        // end statis_item
+
+    }
+    // end statistic_content
+
+}

@@ -1,0 +1,47 @@
+- var introdata = [{"intro_title": "falcon", "intro_subtitle": "one page responsive theme", "intro_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci."},{"intro_title": "falcon 2", "intro_subtitle": "one page responsive theme", "intro_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci."},{"intro_title": "falcon 3", "intro_subtitle": "one page responsive theme", "intro_text": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, adipisci."}]
+
+section.intro.position-relative
+
+    // start intro inner
+    .intro_inner
+
+        // start swiper-container
+        div.swiper-container
+
+            // start swiper-wraper
+            div.swiper-wrapper
+                // start Slides
+
+                // one
+                each data in introdata
+                    div.swiper-slide.d-flex.align-items-center.justify-content-center.text-center
+                        .single_intro.padding_sec
+                            .card
+
+                                // start single_intro_head
+                                .card-header
+                                    h2.h1.head_font=data.intro_title
+                                // start single_intro_head
+
+                                // start single_intro_body
+                                .card-body
+                                    h3.sub-title=data.intro_subtitle
+                                    p.card-text.global_p=data.intro_text
+                                // end  single_intro_body
+
+                                // start single_intro_footer
+                                .card-footer.d-flex.align-items-center.justify-content-center.text-center.flex-column.flex-sm-row
+                                    a.global_btn.card-link(href="#") read more
+                                    a.global_btn.card-link(href="#") our services
+                                // end single_intro_footer
+
+                // end one
+            // end swiper-wraper
+
+            // swiper pagination
+            div.swiper-pagination
+            // end swiper pagination
+
+        // end swiper-container
+
+    // end intro_inner

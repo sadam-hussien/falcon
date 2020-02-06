@@ -1,0 +1,24 @@
+- var statistics = [{"st_icon": "fas fa-tasks", "st_num": "354", "st_title": "completed project"},{"st_icon": "fas fa-users", "st_num": "250", "st_title": "happy clients"},{"st_icon": "fas fa-coffee", "st_num": "114", "st_title": "cupes coffee"},{"st_icon": "fas fa-chart-pie", "st_num": "5", "st_title": "user experience"}]
+
+section.statistic.position-relative
+    .container
+        // start statistic_content
+        .statistic_content
+            .row
+                // start statis_item
+                each statistic in statistics
+                    .col-md-6.col-lg-3
+                        .statis_item
+                            .card
+                                .card-header
+                                    i(class=statistic.st_icon)
+
+                                .card-body.head_font
+                                    .count
+                                        span.number(data-statis=statistic.st_num) 0
+                                        span.plus +
+
+                                .card-footer
+                                    h6.statis_title=statistic.st_title
+                // end statis_item
+        // end statistic_content

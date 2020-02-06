@@ -1,0 +1,42 @@
+body {
+    overflow-x: hidden;
+    font-family: $global_font;
+    color: $dark;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.head_font {
+    font-family: $head_font;
+}
+
+button:focus, input:focus, textarea:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.padding_sec {
+    padding-top: $padding_sec;
+    padding-bottom: $padding_sec;
+}
+
+.global_p {
+    line-height: 1.7;
+    font-size: $small_font;
+    margin: 0;
+    color: $gray;
+}
+
+.swiper-container .swiper-pagination-bullet {
+    width: 15px;
+    height: 15px;
+    opacity: 1;
+    cursor: pointer;
+    background: rgba($white,0.8);
+    &.swiper-pagination-bullet-active {
+        background: $blue;
+        border: 1px solid $white;
+    }
+}

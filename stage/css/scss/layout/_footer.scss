@@ -1,0 +1,118 @@
+footer {
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url(../imgs/assist/wavyblue-min.png);
+        background-size: cover;
+        width: 174px;
+        height: 51px;
+    }
+
+    .footer_content {
+
+        .head {
+            color: $blue;
+            margin-bottom: $medium_distance;
+            text-transform: capitalize;
+            font-family: $head_font;
+            h2 {
+                margin-bottom: 0;
+                
+            }
+        }
+
+        ul {
+            margin-bottom: $large_distance !important;
+            li {
+                a {
+                    color: $dark;
+                    margin-bottom: $small_distance;
+                    display: block;
+                    font-size: $small_font;
+                }
+            }
+        }
+
+        .short_desc {
+            .logo {
+                margin-bottom: $medium_distance;
+                img {
+
+                }
+            }
+        }
+
+        form {
+            .form-group {
+                display: flex;
+                margin-bottom: $medium_distance;
+                background: $blue;
+                input {
+                    background: transparent;
+                    border: none;
+                    width: 100%;
+                    color: $white;
+                    padding: 7px $small_distance;
+                    &::placeholder {
+                        color: $white;
+                        font-size: $small_font;
+                    }
+                }
+                button {
+                    background: $white;
+                    color: $dark;
+                    padding: 0 $small_distance;
+                    border: 1px solid $blue;
+                    font-size: $medium_font;
+                    @include transition(.5s);
+                    &:hover {
+                        background: transparent;
+                        color: $white;
+                    }
+                }
+            }
+        }
+
+    }
+    .footer_footer {
+        height: 80px;
+        p {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            height: 70px;
+            background: $blue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: $white;
+            font-weight: bold;
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                transform: translateX(-50%) rotate(180deg);
+                background-image: url(../imgs/assist/wavyblue-min.png);
+                background-size: cover;
+                width: 174px;
+                height: 51px;
+            }
+            i {
+                position: absolute;
+                bottom: 100%;
+                left: 50%;
+                z-index: 9;
+                transform: translate(-50%, -50%);
+                font-size: 20px;
+                cursor: pointer;
+            }
+        }
+    }
+}

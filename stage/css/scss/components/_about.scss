@@ -1,0 +1,28 @@
+.about {
+
+    // start about_desc
+    .about_desc {
+        .card-body {
+            @include cardreset;
+
+        }
+        .card-footer {
+            @include cardreset;
+            display: flex;
+            margin-top: $medium_distance;
+        }
+    }
+    // end about_desc
+
+    // start about_desc_img
+    .about_desc_img {
+        .img {
+            margin-top: -10%;
+            img {
+                max-width: 320px;
+            }
+        }
+    }
+    // end about_desc_img
+
+}

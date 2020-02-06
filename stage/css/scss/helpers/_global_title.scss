@@ -1,0 +1,48 @@
+.global_title {
+    position: relative;
+    padding-bottom: $medium_distance;
+    margin-bottom: $large_distance;
+    // start main_title
+    .main_title {
+        .main_title_inner {
+            color: $blue;
+            margin-bottom: $small_distance;
+        }
+    }
+    // end main_title
+
+    // start short_title
+    .short_title {
+        .short_title_inner {
+            color: $gray;
+            line-height: 1.7em;
+            margin-bottom: $small_distance;
+        }   
+    }
+    // end short_title
+    
+    // title style line
+    $afterwidth: 200px;
+    $afterheight: 4px;
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: $blue;
+        width: $afterwidth;
+        height: $afterheight;
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        left: $afterwidth;
+        width: 20px;
+        height: 20px;
+        bottom: 0;
+        transform: translate(-5px, calc(50% - (#{$afterheight} / 2)));
+        background: $blue;
+        border-radius: 50%;
+    }
+    
+}

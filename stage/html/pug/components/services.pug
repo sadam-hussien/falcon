@@ -1,0 +1,41 @@
+- var services = [{"s_icon": "fas fa-rocket", "s_title": "branding", "s_desc": "Lorem Ipsum is simply dummy text of the printing industry."},{"s_icon": "fas fa-download", "s_title": "Free Updates", "s_desc": "Lorem Ipsum is simply dummy text of the printing industry."},{"s_icon": "fas fa-leaf", "s_title": "User Friendly", "s_desc": "Lorem Ipsum is simply dummy text of the printing industry."},{"s_icon": "far fa-life-ring", "s_title": "Helping Support", "s_desc": "Lorem Ipsum is simply dummy text of the printing industry."},{"s_icon": "fas fa-desktop", "s_title": "Web Design", "s_desc": "Lorem Ipsum is simply dummy text of the printing industry."},{"s_icon": "fas fa-code", "s_title": "Web Development", "s_desc": "Lorem Ipsum is simply dummy text of the printing industry."},]
+
+- var sec_title = "servivces";
+
+section.services.position-relative.padding_sec
+    
+    // start container
+    .container
+
+        // start serviecs_content
+        .services_content
+
+            // start title
+            .row
+                .col
+                    include global_title
+            // end title
+
+            // start services_items
+            .services_items
+                .row
+                    
+                    // start single_service
+                    each service in services
+                        .col-md-6.col-lg-4
+                            .single_service.d-flex.justify-content-center
+                                
+                                .card
+                                    .card-header
+                                        i(class=service.s_icon)
+                                    .card-body
+                                        h3.card-title.text-capitalize=service.s_title
+                                        p.card-text.global_p=service.s_desc
+
+                    // end single_service
+
+            // end services_items
+
+        // end serviecs_content
+
+    // end container

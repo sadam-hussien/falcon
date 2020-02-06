@@ -1,0 +1,53 @@
+- var blogs = [{"b_img": "imgs/blog/01-min.jpg", "b_title": "title here", "b_subtitle": "18 jan 2020", "b_desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi incidunt iste architecto."},{"b_img": "imgs/blog/02-min.jpg", "b_title": "title here", "b_subtitle": "18 jan 2020", "b_desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi incidunt iste architecto."},{"b_img": "imgs/blog/03-min.jpg", "b_title": "title here", "b_subtitle": "18 jan 2020", "b_desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi incidunt iste architecto."},{"b_img": "imgs/blog/04-min.jpg", "b_title": "title here", "b_subtitle": "18 jan 2020", "b_desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi incidunt iste architecto."},{"b_img": "imgs/blog/05-min.jpg", "b_title": "title here", "b_subtitle": "18 jan 2020", "b_desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi incidunt iste architecto."},{"b_img": "imgs/blog/06-min.jpg", "b_title": "title here", "b_subtitle": "18 jan 2020", "b_desc": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi incidunt iste architecto."},]
+
+- var sec_title = "blog";
+
+section.blog.padding_sec.position-relative
+    .container
+
+        // start blog_content
+        .blog_content
+
+            // start title
+            .row
+                .col
+                    include global_title
+            // end title
+
+            // start blog_items
+            .blog_items
+                .swiper-container
+                    .swiper-wrapper
+
+                        // slides
+
+                        // one
+                        each blog in blogs
+                            .swiper-slide
+                                .single_blog
+                                    .card
+
+                                        // card-header
+                                        .card-header
+                                            .img
+                                                img(src=blog.b_img, alt="01 slide", class="img-fluid")
+                                        // end card-header
+
+                                        // start card-body
+                                        .card-body
+                                            h4.card-title=blog.b_title
+                                            h6.card-subtitle=blog.subtitle
+                                            p.card-text.global_p=blog.b_desc
+                                        // end card-body
+
+                                        // start card-footer
+                                        .card-footer
+                                            include global_btn
+                                        // end card-footer
+
+                        // end one
+                    
+                    .swiper-pagination
+            // end blog_items
+
+        // end blog_content

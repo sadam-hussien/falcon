@@ -1,0 +1,16 @@
+.global_btn {
+    padding: 12px 38px;
+    background: $blue;
+    border-radius: 20px;
+    font-size: $small_font;
+    font-weight: bold;
+    border: 2px solid $blue;
+    color: $white;
+    text-transform: uppercase;
+    @include transition(.5s);
+
+    &:hover {
+        background: transparent;
+        border-color: $blue;
+    }
+}

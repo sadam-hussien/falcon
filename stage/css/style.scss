@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Righteous&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+// vars
+@import "scss/vars/colors";
+@import "scss/vars/global";
+
+// helpers
+@import "scss/helpers/mixins";
+@import "scss/helpers/global";
+@import "scss/helpers/global_btn";
+@import "scss/helpers/global_title";
+
+// layout
+@import "scss/layout/header";
+@import "scss/layout/footer";
+
+// components
+@import "scss/components/intro";
+@import "scss/components/about";
+@import "scss/components/statistics";
+@import "scss/components/assist";
+@import "scss/components/services";
+@import "scss/components/works";
+@import "scss/components/price";
+@import "scss/components/blog";
+@import "scss/components/testim";
+@import "scss/components/contact";

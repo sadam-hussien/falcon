@@ -1,0 +1,111 @@
+.price {
+
+    // start price_content
+    .price_content {
+
+        // start price_items
+        .price_items {
+
+            // strat single_price
+            .single_price {
+                margin-bottom: $large_distance;
+                // start card
+                .card {
+                    @include cardreset();
+                    background: $white;
+                    box-shadow: 0 0 10px rgba($dark, .3);
+                    @include transition(.5s);
+                    &:hover {
+                        box-shadow: 0 0 15px rgba($dark, .5);
+                    }
+                    // start card-header
+                    .card-header {
+                        @include cardreset();
+                        padding: $medium_distance;
+                        background: $blue;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: $white;
+                        position: relative;
+                        .card-title {
+                            font-size: $big_font;
+                            margin: 0;
+                        }
+                        .card-price {
+                            font-size: 25px;
+                        }
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            top: 100%;
+                            right: 0;
+                            // transform: translateX(-50%);
+                            background-image: url(../imgs/assist/wavyblue-min.png);
+                            background-size: cover;
+                            width: 174px;
+                            height: 51px;
+                        }
+
+                    }
+                    // end card-header
+
+                    // start card-body
+                    .card-body {
+                        @include cardreset();
+                        padding: 60px $medium_distance $medium_distance;
+                        ul {
+                            li {
+                                margin-bottom: $small_distance;
+                                color: $gray;
+                                position: relative;
+                                font-size: $small_font;
+                                &::before {
+                                    content: "";
+                                    display: inline-block;
+                                    width: 6px;
+                                    height: 6px;
+                                    border-radius: 50%;
+                                    top: -3px;
+                                    background: $blue;
+                                    margin-right: $medium_distance;
+                                    position: relative;
+                                }
+                            }
+                        }
+                    }
+                    // end card-body
+
+                    // start card-footer
+                    .card-footer {
+                        @include cardreset();
+                        display: flex;
+                        justify-content: flex-end;
+                        overflow: hidden;
+                        a {
+                            width: 100px;   
+                            height: 100px;
+                            transform: translate(25%, 25%);
+                            background: $blue;
+                            border-radius: 50%;
+                            text-align: center;
+                            line-height: 100px;
+                            color: $white;
+                            font-size: $big_font;
+                        }
+                    }
+                    // end card-footer
+
+                }
+                // end card
+
+            }
+            // end single_price
+
+        }
+        // end price_items
+
+    }
+    // end price_content
+
+}

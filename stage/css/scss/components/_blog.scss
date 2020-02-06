@@ -1,0 +1,93 @@
+.blog {
+    background-image: url(../imgs/blog/blog-bg-min.png);
+    background-size: cover;
+    background-attachment: fixed;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background-image: url(../imgs/assist/wavy-min.png);
+        background-size: cover;
+        width: 174px;
+        height: 51px;
+    }
+
+    // start blog_content
+    .blog_content {
+
+        // start blog_items
+        .blog_items {
+
+            .swiper-container {
+                padding-bottom: $large_distance;
+            }
+
+            // start single_blog
+            .single_blog {
+                margin-bottom: $large_distance;
+                .card {
+                    @include cardreset();
+                    background: $white;
+                    box-shadow: 0 0 10px rgba($dark, .3);
+                    border-radius: 10px;
+                    overflow: hidden;
+                    // start card-header
+                    .card-header {
+                        @include cardreset();
+                        .img {
+                            img {
+
+                            }
+                        }
+                    }
+                    // end card-header
+
+                    // start card-body
+                    .card-body {
+                        @include cardreset();
+                        padding: $medium_distance;
+                        .card-title {
+                            color: $blue;
+                            font-weight: bold;
+                            margin-bottom: $small_distance;
+                        }
+                        .card-subtitle {
+                            color: $gray;
+                            margin-bottom: $small_distance;
+                        }
+                        .card-text {
+
+                        }
+                    }
+                    // end card-body
+
+                    // start card-footer
+                    .card-footer {
+                        @include cardreset();
+                        display: flex;
+                        justify-content: center;
+                        padding: $medium_distance;
+                    }
+                    // end card-footer
+
+                }
+
+            }
+            // emd single_blog
+
+        }
+        // end blog_items
+
+    }
+    // end blog_content
+
+    .swiper-container .swiper-pagination-bullet {
+        background-color: $dark;
+        &.swiper-pagination-bullet-active {
+            background-color: $blue;
+        }
+    }
+}

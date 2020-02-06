@@ -1,0 +1,99 @@
+- var sec_title = "works";
+
+section.works.padding_sec.position-relative
+    .container
+        // start works_content
+        .works_content
+
+            // start title
+            .row
+                .col
+                    include global_title
+            // end title
+
+            // start works_item
+            .works_item
+
+                // start filter_works
+                .filter_works
+                    ul.list-unstyled.d-flex.m-0.p-0.align-items-center.flex-column.flex-sm-row
+                        li(data-filter="all") all 
+                        li(data-filter=".graphics") graphics 
+                        li(data-filter=".web_design") web design 
+                        li(data-filter=".illistrator") illistrator 
+                        li(data-filter=".other") other
+                // end filter_works
+
+                // start works_wrap
+                .works_wrap
+
+                    // single_work
+                    div(class="single_work mix graphics")
+                        .img
+                            img(src="imgs/works/animals-min.png", alt="graphics", class="img-fluid")
+                        .work_desc
+                            span graphics
+                    // end single_work
+
+                    // single_work
+                    div(class="single_work mix illistrator")
+                        .img
+                            img(src="imgs/works/fish-min.png", alt="illistrator", class="img-fluid")
+                        .work_desc
+                            span illistrator
+                    // end single_work
+
+                    // single_work
+                    div(class="single_work mix other")
+                        .img
+                            img(src="imgs/works/capenter-min.png", alt="other", class="img-fluid")
+                        .work_desc
+                            span other
+                    // end single_work
+
+                    // single_work
+                    div(class="single_work mix web_design")
+                        .img
+                            img(src="imgs/works/game-min.png", alt="web_design", class="img-fluid")
+                        .work_desc
+                            span web_design
+                    // end single_work
+
+                    // single_work
+                    div(class="single_work mix graphics illistrator")
+                        .img
+                            img(src="imgs/works/bus-min.png", alt="graphics2", class="img-fluid")
+                        .work_desc
+                            span graphics
+                    // end single_work
+
+                    // single_work
+                    div(class="single_work mix web_design illistrator")
+                        .img
+                            img(src="imgs/works/tabels-min.png", alt="web_design2", class="img-fluid")
+                        .work_desc
+                            span web_design
+                    // end single_work
+
+                    // single_work
+                    div(class="single_work mix other")
+                        .img
+                            img(src="imgs/works/light-min.png", alt="other3", class="img-fluid")
+                        .work_desc
+                            span other
+                    // end single_work
+
+                    // single_work
+                    div(class="single_work mix illistrator other")
+                        .img
+                            img(src="imgs/works/halloien-min.png", alt="illistrator3", class="img-fluid")
+                        .work_desc
+                            span illistrator3
+                    // end single_work
+
+                // end works_wrap
+
+
+            // end works_item
+
+        // end works_content
